@@ -2,7 +2,7 @@
   class="bg-neutral-50 text-neutral-800 antialiased font-[Inter] selection:bg-neutral-800 selection:text-white"
 >
   <!-- Sticky Navigation -->
-  <header class="sticky top-0 z-30 border-b border-neutral-200 bg-neutral">
+  <header class="sticky top-0 z-30 border-b border-neutral-200 bg-neutral-50">
     <div class="mx-auto max-w-7xl px-6 py-4 md:px-10 lg:px-12">
       <div
         class="flex items-center justify-between rounded-2xl border border-neutral-200 bg-white px-4 py-3"
@@ -46,7 +46,7 @@
         </nav>
 
         <!-- Mobile Nav -->
-        <details class="relative md:hidden">
+        <details class="relative md:hidden" #mobileNav>
           <summary
             class="inline-flex h-11 cursor-pointer items-center gap-2 rounded-xl border border-neutral-300 bg-white px-4 text-sm font-medium text-neutral-800 transition duration-200 hover:-translate-y-0.5 hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 font-[Inter] list-none"
             aria-label="Menü öffnen"
@@ -69,21 +69,25 @@
             <a
               class="flex w-full items-center rounded-xl px-3 py-2 text-left text-sm text-neutral-800 hover:bg-neutral-100 font-[Inter]"
               href="#projects"
+              (click)="mobileNav.removeAttribute('open')"
               >Projekte</a
             >
             <a
               class="flex w-full items-center rounded-xl px-3 py-2 text-left text-sm text-neutral-800 hover:bg-neutral-100 font-[Inter]"
               href="#about"
+              (click)="mobileNav.removeAttribute('open')"
               >Über mich</a
             >
             <a
               class="flex w-full items-center rounded-xl px-3 py-2 text-left text-sm text-neutral-800 hover:bg-neutral-100 font-[Inter]"
               href="#skills"
+              (click)="mobileNav.removeAttribute('open')"
               >Skills</a
             >
             <a
               class="flex w-full items-center rounded-xl px-3 py-2 text-left text-sm text-neutral-800 hover:bg-neutral-100 font-[Inter]"
               href="#contact"
+              (click)="mobileNav.removeAttribute('open')"
               >Kontakt</a
             >
           </div>
@@ -91,7 +95,6 @@
       </div>
     </div>
   </header>
-
   <main
     id="top"
     class="mx-auto flex min-h-screen max-w-7xl flex-col gap-28 px-6 py-16 md:px-10 lg:px-12"
